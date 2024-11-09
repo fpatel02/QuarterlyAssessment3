@@ -37,3 +37,17 @@ for you question displaying in a class. The class can then be called for every
 question inside your database. This is a requirement not a suggestion. It
 may take more time to set up, but scaling up after that requires minimal
 effort.
+
+
+QuestionsAnswers.py:
+    Create the Database: The script connects to a SQLite database called questions_answers.db. If the file does not exist, SQLite will automatically create it.
+
+    Create a Table: The CREATE TABLE IF NOT EXISTS statement ensures that the questions table is created if it doesn't already exist. The table has columns for:
+
+        id (Primary key)
+        question (The question text)
+        option_a, option_b, option_c, option_d (The answer choices)
+        correct_answer (The correct answer's identifier, e.g., "a", "b", "c", "d")
+    Insert Data: The script inserts each question and its corresponding answer choices into the table using the INSERT INTO statement.
+
+    Verify Data: After inserting the data, it retrieves and prints all records from the questions table.
