@@ -51,3 +51,26 @@ QuestionsAnswers.py:
     Insert Data: The script inserts each question and its corresponding answer choices into the table using the INSERT INTO statement.
 
     Verify Data: After inserting the data, it retrieves and prints all records from the questions table.
+
+
+
+databasereadfile.py:
+    Connecting to the Database:
+
+        The function read_from_db() accepts the db_file as an argument, which is the path to the SQLite database file.
+        It establishes a connection to the database and creates a cursor to execute SQL queries.
+    Retrieving Table Names:
+
+        The SQL query SELECT name FROM sqlite_master WHERE type='table'; is used to retrieve all the table names in the database.
+        The result is stored in tables, and each table name is printed with a numbered list.
+    User Table Selection:
+
+        The user is prompted to input the table number they want to read data from.
+        The function checks if the input is valid and if the table choice is within the valid range of available tables.
+    Fetching and Printing Data:
+
+        Once the user selects a table, the function executes SELECT * FROM <table_name> to fetch all rows from the chosen table.
+        If the table contains data, it prints the column names as a header followed by the data in each row. If no data is found, it prints a message indicating the table is empty.
+    Closing the Connection:
+
+    Finally, the function closes the database connection after printing the data.
