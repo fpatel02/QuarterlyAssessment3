@@ -74,3 +74,11 @@ databasereadfile.py:
     Closing the Connection:
 
     Finally, the function closes the database connection after printing the data.
+
+
+main.py:
+
+    Database Connection: The sqlite3 connection fetches questions based on the selected category.
+    First Window (Category Selection): Allows users to choose a quiz category.
+    Second Window (Quiz): Displays questions and multiple-choice answers, with a submit button to check answers.
+    Answer Validation: Compares the user’s choice with the correct answer, providing feedback with a message box.
